@@ -1,0 +1,327 @@
+@import url(https://fonts.googleapis.com/css?family=Oxygen+Mono);/* Starter CSS for Menu */
+
+#cssmenu {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  width: auto;
+}
+
+#cssmenu ul,
+#cssmenu li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#cssmenu ul {
+  position: relative;
+  z-index: 597;
+}
+
+#cssmenu ul li {
+  float: left;
+  min-height: 1px;
+  vertical-align: middle;
+}
+
+#cssmenu ul li.hover,
+#cssmenu ul li:hover {
+  position: relative;
+  z-index: 599;
+  cursor: default;
+}
+
+#cssmenu ul ul {
+  visibility: hidden;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 598;
+  width: 100%;
+}
+
+#cssmenu ul ul li {
+  float: none;
+}
+
+#cssmenu ul ul ul {
+  top: 0;
+  left: 190px;
+  width: 190px;
+}
+
+#cssmenu ul li:hover > ul {
+  visibility: visible;
+}
+
+#cssmenu ul ul {
+  bottom: 0;
+  left: 0;
+}
+
+#cssmenu ul ul {
+  margin-top: 0;
+}
+
+#cssmenu ul ul li {
+  font-weight: normal;
+}
+
+#cssmenu a {
+  display: block;
+  line-height: 1em;
+  text-decoration: none;
+}
+
+/* Custom CSS Styles */
+
+#cssmenu {
+  background: #333333;
+  border-bottom: 4px solid #1b9bff;
+  font-family: "Oxygen Mono", Tahoma, Arial, sans-serif;
+  font-size: 12px;
+}
+
+#cssmenu > ul {
+  *display: inline-block;
+}
+
+#cssmenu:after,
+#cssmenu ul:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+#cssmenu ul {
+  text-transform: uppercase;
+}
+
+#cssmenu ul ul {
+  border-top: 4px solid #1b9bff;
+  text-transform: none;
+  min-width: 190px;
+}
+
+#cssmenu ul ul a {
+  background: #1b9bff;
+  color: #ffffff;
+  border: 1px solid #0082e7;
+  border-top: 0 none;
+  line-height: 150%;
+  padding: 16px 20px;
+  font-size: 12px;
+}
+
+#cssmenu ul ul ul {
+  border-top: 0 none;
+}
+
+#cssmenu ul ul li {
+  position: relative;
+}
+
+#cssmenu ul ul li:first-child > a {
+  border-top: 1px solid #0082e7;
+}
+
+#cssmenu ul ul li:hover > a {
+  background: #4eb1ff;
+  color: #ffffff;
+}
+
+#cssmenu ul ul li:last-child > a {
+  border-radius: 0 0 3px 3px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  box-shadow: 0 1px 0 #1b9bff;
+}
+
+#cssmenu ul ul li:last-child:hover > a {
+  border-radius: 0 0 0 3px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+
+#cssmenu ul ul li.has-sub > a:after {
+  content: "+";
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  margin-top: -8px;
+}
+
+#cssmenu ul li:hover > a,
+#cssmenu ul li.active > a {
+  background: #1b9bff;
+  color: #ffffff;
+}
+
+#cssmenu ul li.has-sub > a:after {
+  content: "+";
+  margin-left: 5px;
+}
+
+#cssmenu ul li.last ul {
+  left: auto;
+  right: 0;
+}
+
+#cssmenu ul li.last ul ul {
+  left: auto;
+  right: 99.5%;
+}
+
+#cssmenu a {
+  background: #333333;
+  color: #CBCBCB;
+  padding: 0 20px;
+}
+
+#cssmenu > ul > li > a {
+  line-height: 48px;
+  font-size: 12px;
+}
+
+a.router-link-exact-active {
+  background-color: #1b9bff !important;
+  color: #fff !important;
+}
+
+.loader {
+  background: #000;
+  background: radial-gradient(#222, #000);
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 99999;
+}
+
+.loader-inner {
+  bottom: 0;
+  height: 60px;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100px;
+}
+
+.loader-line-wrap {
+  -webkit-animation: spin 2000ms cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
+          animation: spin 2000ms cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
+  box-sizing: border-box;
+  height: 50px;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  -webkit-transform-origin: 50% 100%;
+          transform-origin: 50% 100%;
+  width: 100px;
+}
+
+.loader-line {
+  border: 4px solid transparent;
+  border-radius: 100%;
+  box-sizing: border-box;
+  height: 100px;
+  left: 0;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100px;
+}
+
+.loader-line-wrap:nth-child(1) {
+  -webkit-animation-delay: -50ms;
+          animation-delay: -50ms;
+}
+
+.loader-line-wrap:nth-child(2) {
+  -webkit-animation-delay: -100ms;
+          animation-delay: -100ms;
+}
+
+.loader-line-wrap:nth-child(3) {
+  -webkit-animation-delay: -150ms;
+          animation-delay: -150ms;
+}
+
+.loader-line-wrap:nth-child(4) {
+  -webkit-animation-delay: -200ms;
+          animation-delay: -200ms;
+}
+
+.loader-line-wrap:nth-child(5) {
+  -webkit-animation-delay: -250ms;
+          animation-delay: -250ms;
+}
+
+.loader-line-wrap:nth-child(1) .loader-line {
+  border-color: #eb4747;
+  height: 90px;
+  width: 90px;
+  top: 7px;
+}
+
+.loader-line-wrap:nth-child(2) .loader-line {
+  border-color: #ebeb47;
+  height: 76px;
+  width: 76px;
+  top: 14px;
+}
+
+.loader-line-wrap:nth-child(3) .loader-line {
+  border-color: #47eb47;
+  height: 62px;
+  width: 62px;
+  top: 21px;
+}
+
+.loader-line-wrap:nth-child(4) .loader-line {
+  border-color: #47ebeb;
+  height: 48px;
+  width: 48px;
+  top: 28px;
+}
+
+.loader-line-wrap:nth-child(5) .loader-line {
+  border-color: #4747eb;
+  height: 34px;
+  width: 34px;
+  top: 35px;
+}
+
+@-webkit-keyframes spin {
+  0%, 15% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0%, 15% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
